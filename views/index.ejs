@@ -6,6 +6,9 @@
     </head>
     <body>
         <div class="container">
+            <% if (locals.error) { %>
+                <h2 style="color: red;"><%= error %></h2>
+            <% } %>
             <h1 class="header">
                 FreeCodeCamp API Basejump: URL Shortener Microservice
             </h1>

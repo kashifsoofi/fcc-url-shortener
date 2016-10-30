@@ -5,6 +5,14 @@ var router = express.Router();
 var mongoose = require('mongoose');
 var urlInfo = require('../models/UrlInfo.js');
 
+router.get('/new', function(req, res) {
+    var appUrl = req.protocol + '://' + req.get('host') + '/';
+    res.render('index', {
+        appUrl: appUrl,
+        error: 'Error: You need to provide a proper url.'
+    });
+});
+
 router.get('/:url', function (req, res) {
     var url = '' + req.params.url;
     urlInfo.findOne({ short_url: url }, function (err, result) {
