@@ -12,8 +12,8 @@ router.get('/:url', function (req, res) {
             throw err;
         }
         
-        var urlInfoObj = result.toObject();
-        if (urlInfoObj) {
+        if (result) {
+            var urlInfoObj = result.toObject();
             console.log('Found: ' + urlInfoObj);
             console.log('Redirecting to: ' + urlInfoObj.original_url);
             res.redirect(301, urlInfoObj.original_url);
