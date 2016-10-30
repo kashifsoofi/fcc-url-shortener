@@ -1,4 +1,4 @@
-# Free Code Camp - URL Shortner Microservice
+# Free Code Camp - URL Shortener Microservice
 
 This is URL Shortner Microservice for Free Code Camp.
 
